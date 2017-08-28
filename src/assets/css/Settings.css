@@ -1,0 +1,89 @@
+.SettingsScreen {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  justify-content: center;
+}
+
+form {
+  width: 50%;
+}
+
+h2 {
+  color: #41617C;
+  font-family: 'daunpenhAlt';
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input, select {
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  color: #495057;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: .5rem .75rem;
+  width: 100%;
+}
+
+select {
+  height: calc(2.25rem + 2px);
+}
+
+input {
+  width: calc(100% - .75rem - .75rem);
+}
+
+.tryConnection {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-color: #868e96;
+  border-radius: .25rem;
+  color: #868e96;
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .5rem .75rem;
+  text-align: center;
+}
+
+.badge {
+  border-radius: .25rem;
+  color: #fff;
+  display: inline-block;
+  font: 11px system-ui;
+  margin: .5rem 0 0 .5rem;
+  padding: .5rem .75rem;
+  text-align: center;
+}
+.badgeDisconnected {
+  background: #dc3545;
+}
+.badgeConnected {
+  background: #28a745;
+}
+
+.close {
+  background: #41617C;
+  box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 5px;
+  color: #F2F2F2;
+  display: block;
+  font-family: 'daunpenhAlt';
+  font-size: 1.5em;
+  margin-top: 50px;
+  padding: 20px 0 10px;
+  text-align: center;
+}

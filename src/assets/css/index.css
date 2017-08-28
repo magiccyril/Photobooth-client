@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'daunpenhAlt';
+    src: url('../fonts/ebgaramond-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ebgaramond-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'foglihtenno06';
+    src: url('../fonts/foglihtenno06_076-webfont.woff2') format('woff2'),
+         url('../fonts/foglihtenno06_076-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root,
+#root > div {
+  height: 100%;
+}
