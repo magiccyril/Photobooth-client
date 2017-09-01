@@ -13,7 +13,7 @@ export const setReset = () => (dispatch) => {
   })
 }
 
-const reset = () => {
+export const reset = () => {
   return {
     type: RESET,
   }

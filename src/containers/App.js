@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
+import { reset } from '../actions/AppActions'
 import { requestPhoto } from '../actions/PhotoActions'
 import { startTimer, stopTimer } from '../actions/TimerActions'
 import { socketConnect } from '../actions/SocketActions'
@@ -16,12 +17,17 @@ import iconRestart from '../assets/img/icon-restart.svg'
 class App extends Component {
   constructor(props) {
     super(props)
+    this.handleRestart = this.handleRestart.bind(this)
     this.handleStart = this.handleStart.bind(this)
     this.handleCancel = this.handleCancel.bind(this)
   }
   
   componentDidMount() {
     this.props.dispatch(socketConnect())
+  }
+
+  handleRestart() {
+    this.props.dispatch(reset())
   }
 
   handleStart() {
@@ -55,14 +61,14 @@ class App extends Component {
         { this.props.showResult &&
           <section className="resultScreen">
             <img src={ this.props.photo } alt="" className="resultPhoto" />
-            <button onClick={this.handleStart}><img src={iconRestart} alt="" /> Recommencer</button>
+            <button onClick={this.handleRestart}><img src={iconRestart} alt="" /> Nouvelle photo</button>
           </section>
         }
         
         { this.props.showError &&
           <section className="errorScreen">
             <h1>Oups,<br />une erreur est survenue !</h1>
-            <button onClick={this.handleStart}><img src={iconRestart} alt="" /> Recommencer</button>
+            <button onClick={this.handleRestart}><img src={iconRestart} alt="" /> Recommencer</button>
           </section>
         }
       </div>

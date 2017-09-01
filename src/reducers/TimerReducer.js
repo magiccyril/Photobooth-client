@@ -20,6 +20,7 @@ const TimerReducer = (state = initialState, action) => {
       return {
         ...initialState,
         length: currentLength,
+        running: false,
       }
 
     case TIMER_START:
