@@ -91,6 +91,8 @@ const getCurrentTimer = (state) => {
 }
 
 const mapStateToProps = (state) => {
+  let socketProtocol = state.socket.uri.substring(0, 7) === 'http://' ? '' : 'http://'
+  
   return {
     showStart: !state.photo.error && !state.timer.running && !state.photo.pending && !state.photo.path,
     showTimer: !state.photo.error && (state.timer.running || state.photo.pending) && !state.photo.path,
@@ -102,7 +104,7 @@ const mapStateToProps = (state) => {
     timer: getCurrentTimer(state),
     isCancelable: !state.photo.pending,
     
-    photo: 'http://' + state.socket.uri + state.photo.path,
+    photo: socketProtocol + state.socket.uri + state.photo.path,
   }
 }
 
