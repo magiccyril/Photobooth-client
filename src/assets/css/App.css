@@ -94,6 +94,7 @@ button:focus {
 
 .resultScreen .resultPhoto {
   display: block;
+  width: 640px;
 }
 .resultScreen button {
   background: #41617C;
