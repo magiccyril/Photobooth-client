@@ -8,7 +8,7 @@ import {
 const initialState = {
   connected: false,
   socket: null,
-  uri: '',
+  uri: 'http://photobooth.server',
 }
 
 const SocketReducer = (state = initialState, action) => {
