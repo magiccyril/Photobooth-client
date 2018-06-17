@@ -7,7 +7,7 @@ import {
 let resetTimeout = null
 
 export const setReset = () => (dispatch) => {
-  resetTimeout = setTimeout(() => dispatch(reset()), 60000)
+  resetTimeout = setTimeout(() => dispatch(reset()), 120000)
   dispatch({
     type: RESET_SET,
   })
