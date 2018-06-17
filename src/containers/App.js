@@ -7,8 +7,6 @@ import { requestPhoto } from '../actions/PhotoActions'
 import { startTimer, stopTimer } from '../actions/TimerActions'
 import { socketConnect } from '../actions/SocketActions'
 
-import Header from '../components/Header.js'
-
 import '../assets/css/App.css';
 
 import iconPhoto from '../assets/img/icon-photo.svg'
@@ -41,10 +39,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="flower"></div>
         { this.props.showStart &&
           <section className="startScreen">
-            <Header />
             { this.props.socketConnected && <button onClick={this.handleStart}><img src={iconPhoto} alt="" /> Prendre une photo</button> }
             { !this.props.socketConnected && <span>Problème de connexion avec le serveur</span> }
             <Link to='/settings' className="settings">Paramètres</Link>
